@@ -1,0 +1,264 @@
+.home {
+  .hero {
+    position: relative;
+    width: 100%;
+    height: min(rem(900), 100vh);
+    background: no-repeat var(--violet) -275%/107% url("../img/[removal1.png");
+    padding-top: rem(95);
+    @include breakpoint-down(large) {
+      background-image: none;
+      text-align: center;
+      :where(h1) {
+        margin-inline: auto;
+      }
+    }
+
+    &__title {
+      h1 {
+        margin-bottom: clamp(rem(16), 2.3vw + 1rem, rem(51));
+      }
+
+      a > i {
+        margin-left: rem(12);
+      }
+
+      img {
+        position: absolute;
+        inset: 45%;
+        height: rem(141);
+        aspect-ratio: 1 /1;
+        @include breakpoint-down(large) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .about-ceo {
+    padding: rem(214) 0 rem(61) 0;
+    background: var(--mercury);
+
+    --_m-2: 2.5rem;
+
+    &__info {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: var(--_m-2);
+      gap: rem(62);
+      @include breakpoint-down(large) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &__img {
+      position: relative;
+      margin-bottom: var(--_m-2);
+      width: min(70vw, rem(452));
+      height: rem(343);
+      background-color: var(--violet);
+      @include breakpoint-down(small) {
+        background-color: transparent;
+      }
+
+      img {
+        @include position(absolute, $top: rem(-175), $left: 50%);
+        transform: translateX(-50%);
+      }
+
+      figcaption {
+        position: absolute;
+        top: calc(100% + rem(24));
+
+        p:first-of-type {
+          --fw: var(--fw-600);
+          --clr: var(--main-color);
+        }
+
+        p:last-of-type {
+          --fs: var(--fs-300);
+        }
+      }
+    }
+
+    &__title {
+      h2 {
+        --fs: var(--fs-700);
+      }
+      p {
+        margin-top: var(--fs-500);
+      }
+    }
+
+    &__achievement {
+      display: flex;
+      justify-content: space-between;
+      padding-top: rem(84);
+
+      @include breakpoint-down(small) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .frame {
+        p {
+          --width: unset;
+          text-transform: uppercase;
+          margin-bottom: rem(16);
+        }
+
+        > div {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .we {
+    padding: rem(52) 0 rem(80) 0;
+
+    .cards {
+      .card {
+        h3 {
+          margin-top: rem(42);
+        }
+
+        p {
+          --width: 23ch;
+          margin-top: rem(24);
+        }
+
+        [href] {
+          margin-top: rem(36);
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    background: var(--mercury);
+    padding-top: rem(66);
+    padding-bottom: rem(102);
+
+    .headline {
+      h2 {
+        @include breakpoint-down(large) {
+          --width: 18ch;
+        }
+      }
+    }
+
+    .cards {
+      position: relative;
+      margin: 0 auto;
+      overflow: visible;
+      @include breakpoint(medium) {
+        width: 70vw;
+      }
+
+      .slick-arrow {
+        @include position(absolute, $top: -20%, $right: rem(80));
+        background-color: transparent;
+        cursor: pointer;
+
+        &.slick-prev {
+          right: rem(150);
+          left: unset;
+        }
+      }
+
+      .slick-list {
+        margin-left: 7px;
+      }
+
+      .slick-track {
+        display: flex;
+        justify-content: center;
+        gap: rem(30);
+      }
+
+      .card {
+        position: relative;
+
+        &::before {
+          content: "";
+          @include position(absolute, $left: 0, $bottom: 0);
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            0deg,
+            #1e3240 -7.9%,
+            rgba(66, 77, 121, 0) 40.4%
+          );
+        }
+
+        figure {
+          img {
+            min-width: rem(354);
+            min-height: rem(500);
+          }
+
+          figcaption {
+            @include position(absolute, $left: rem(25), $bottom: rem(24));
+            h3 {
+              --clr: var(--white);
+              --fs: var(--fs-400);
+              --line-height: 36px;
+              margin-bottom: rem(4);
+            }
+
+            p {
+              --clr: var(--white);
+              --fs: var(--fs-300);
+              --line-height: 20px;
+              margin-bottom: rem(4);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .testimonials {
+    padding-top: rem(57);
+    padding-bottom: rem(110);
+  }
+
+  .contact-us {
+    display: flex;
+    background: var(--violet);
+
+    &__content {
+      padding-top: rem(46);
+      padding-bottom: rem(49);
+
+      @include breakpoint(large) {
+        width: 23.5%;
+      }
+    }
+
+    .headline {
+      @include breakpoint-down(medium) {
+        text-align: center;
+      }
+
+      h2 {
+        --width: 14ch;
+        @include breakpoint-down(medium) {
+          margin-inline: auto;
+        }
+      }
+    }
+
+    &__img {
+      @include breakpoint-down(medium) {
+        display: none;
+      }
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+body {
+  font: var(--fw-400) var(--fs-400) / 1.558 var(--archivo);
+  color: var(--dark-blue);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--fw, var(--fw-600));
+  font-family: var(--poppins);
+  color: var(--clr, var(--main-color));
+  max-width: var(--width);
+}
+
+h1 {
+  --width: 12ch;
+  font-size: var(--fs-800);
+  line-height: 1.14;
+}
+
+h2 {
+  --width: 19ch;
+  font-size: var(--fs, var(--fs-600));
+  line-height: var(--line-height, 1.525);
+}
+
+h3 {
+  --fw: var(--fw-700);
+  font-size: var(--fs, var(--fs-500));
+  line-height: var(--line-height, 1.525);
+}
+
+h4 {
+  --fw: var(--fw-700);
+  font-size: var(--fs, var(--fs-400));
+  line-height: var(--line-height, 1.525);
+}
+
+p {
+  --width: 43ch;
+  font-size: var(--fs, inherit);
+  font-weight: var(--fw, inherit);
+  line-height: var(--line-height, inherit);
+  color: var(--clr, inherit);
+  max-width: var(--width);
+}
+
+a {
+  font-size: var(--fs-200);
+  font-family: var(--archivo);
+  color: var(--main-color);
+}
+
+input,
+textarea {
+  font-size: var(--fs-200);
+}

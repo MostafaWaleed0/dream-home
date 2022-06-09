@@ -1,0 +1,48 @@
+.slides {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+
+  svg {
+    @include position(absolute, $left: rem(-64), $top: rem(-64), $z-index: -1);
+  }
+
+  .slide {
+    display: none;
+    margin-top: rem(82);
+
+    h3 {
+      --width: 32ch;
+    }
+
+    p {
+      --lineHeight: 152.5%;
+      --width: 60ch;
+      margin-top: rem(16);
+    }
+
+    h4 {
+      margin-top: rem(16);
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__control {
+    @include position(absolute, $bottom: -2px, $right: max(10vw, rem(146)));
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(11);
+
+    button {
+      color: var(--main-color);
+      background: none;
+      border: 0;
+      outline: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+  }
+}

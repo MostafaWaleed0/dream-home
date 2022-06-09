@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  background: var(--main-color);
+  white-space: nowrap;
+  color: var(--white);
+  font: var(--fw-400) var(--fs-200) / em(18) var(--archivo);
+
+  &--sm {
+    font-size: var(--fs-200);
+    padding: em(12) em(20);
+  }
+
+  &--bg {
+    font-size: var(--fs-200);
+    padding: em(12) em(48);
+  }
+
+  &--lg {
+    font-size: var(--fs-200);
+    padding: em(16) em(32);
+    font-family: var(--archivo);
+  }
+}

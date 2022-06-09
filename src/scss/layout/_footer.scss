@@ -1,0 +1,14 @@
+.site-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: rem(16) 0;
+  }
+}

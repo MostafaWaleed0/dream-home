@@ -1,0 +1,20 @@
+nav {
+  overflow-x: auto;
+
+  > ul {
+    display: flex;
+    align-items: center;
+    margin-block: rem(16);
+    @include breakpoint-down(medium) {
+      margin-inline-start: calc(rem(48) * -1);
+    }
+
+    > li {
+      margin-left: rem(48);
+
+      > a {
+        white-space: nowrap;
+      }
+    }
+  }
+}

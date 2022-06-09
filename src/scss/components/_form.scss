@@ -1,0 +1,28 @@
+form {
+  font-family: var(--archivo);
+
+  input {
+    margin-top: rem(24);
+    padding-left: rem(20);
+    border: 2px solid var(--dark-blue);
+    width: 100%;
+    height: rem(48);
+    background-color: transparent;
+    outline: 0;
+  }
+
+  textarea {
+    padding: rem(12) rem(20);
+    margin-top: rem(24);
+    border: 2px solid var(--dark-blue);
+    width: 100%;
+    height: rem(144);
+    resize: none;
+    background-color: transparent;
+    outline: 0;
+  }
+
+  button {
+    margin-top: rem(24);
+  }
+}

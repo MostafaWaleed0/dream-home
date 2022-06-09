@@ -1,0 +1,14 @@
+.site-head {
+  background-color: var(--violet);
+  width: 100%;
+  padding-top: rem(24);
+  overflow-x: auto;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+}
